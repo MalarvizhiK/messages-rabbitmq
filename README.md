@@ -55,7 +55,7 @@ Open a terminal and set the CLASSPATH as below:
 
 > (base) Malars-MacBook-Pro-2:rabbit-test malark$ export CLASSPATH=/Users/malark/downloads/slf4j-api-1.7.30.jar:/Users/malark/downloads/geronimo-jms_1.1_spec-1.1.1.jar://Users/malark/downloads/rabbitmq-jms-2.2.0.jar:/Users/malark/downloads/amqp-client-5.10.0.jar
 
-JMS Client for Point to Point messaging style:
+### JMS Client for Point to Point messaging style
 
 The code **JMSProducer.java** creates a connection factory, create a new connection and session, create message producers which we will then use to send messages. It creates a queue called **jmsqueue**. It send the message to the created queue.  
 
@@ -65,10 +65,6 @@ In the Connection factory, set the username and password from the New Service Cr
 
 ![RabbitMQ AMQPS](images/RabbitMQ_AMQPS.png)
 	
-// Producer
-ConnectionFactory connectionFactory = new ActiveMQConnectionFactory(
-                    "tcp://localhost:61616");
-connection = connectionFactory.createConnection();
 
 Compile and Run the Program as shown below:
 
@@ -116,7 +112,7 @@ Customer received Task9
 Customer received END  
 
 
-
+### JMS Client for Publish/Subscribe messaging style
 
 
 
