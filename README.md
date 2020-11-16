@@ -9,7 +9,7 @@ Here is my Summary of my created Service instance:
 
 Region: Dallas  
 Plan: Standard  
-Service name: Messages for RabbitMQ-rb  
+Service name: Messages for RabbitMQ-as  
 Resource group: Default  
   
 Service instance will be provisioned in few minutes. From the dashboard, navigate to Services - Messages for RabbitMQ-as. 
