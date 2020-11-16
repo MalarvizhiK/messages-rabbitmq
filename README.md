@@ -23,7 +23,7 @@ To Login to Admin console, you need a username and password. Set the password (m
 
 ![Set Admin Password](images/Change_Admin_Password.png)
 
-Click Launch button in the Overview - Connections - HTTPS. Login with username/password as admin/<new password set above>. 
+Click Launch button in the Connections - HTTPS screen. In the Admin Console Launch screen, login with username/password as admin/<new password set above>. 
   
 ![Admin Console](images/Admin_Console.png)
 
@@ -32,6 +32,8 @@ Click Launch button in the Overview - Connections - HTTPS. Login with username/p
 If you do not want to use admin user, then follow the steps for creating new user [here](https://cloud.ibm.com/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings)  You can share this user with other applications. 
 
 ![New User](images/New_User.png)
+
+Now, let us 
 
 
 Java doc for Rabbit MQ: https://rabbitmq.github.io/rabbitmq-java-client/api/current/allclasses.html
