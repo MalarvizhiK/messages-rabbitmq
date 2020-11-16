@@ -12,7 +12,8 @@ Resource group: Default
   
 Service instance will be provisioned in few minutes. From the dashboard, navigate to Services - Messages for RabbitMQ-as. 
 
-Find the RabbitMQ Admin Console:
+**RabbitMQ Admin Console**
+
 The URL to launch RabbitMQ Admin console is found under Overview - Connections - HTTPS.
 
  ![Connection HTTPS ](images/RabbitMQ_AdminConsole_URL.png)
@@ -26,9 +27,9 @@ Click Launch button in the Overview - Connections - HTTPS. Login with username/p
   
 ![Admin Console](images/Admin_Console.png)
 
-Create new user in Rabbit MQ as shown below: 
+**Create new user in Rabbit MQ**
 
-Follow the steps for creating new user [here](https://cloud.ibm.com/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings)  
+If you do not want to use admin user, then follow the steps for creating new user [here](https://cloud.ibm.com/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings)  You can share this user with other applications. 
 
 ![New User](images/New_User.png)
 
