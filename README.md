@@ -117,7 +117,7 @@ Customer received END
 
 ### JMS Client for Publish/Subscribe messaging style
 
-Let’s now look into a client that uses publish−and−subscribe message style. 
+Let’s now look into a client example that uses publish−and−subscribe message style. 
 
 When a publisher sends a message, there may be more than one customer interested in such messages. Publisher broadcasts the message to JMS destination called ‘topic’. There may be more than one consumer subscribed to the topic. All the active clients subscribed to the topic will receive message and there is no need for the subscriber to poll for the messages. Every active subscriber receives its own copy of each message published to the topic. In this example, we will look into durable subscriber.
 
