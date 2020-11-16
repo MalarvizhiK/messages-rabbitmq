@@ -138,8 +138,7 @@ Sending text 'Task'
 Consumer1 receives Task  
 Consumer2 receives Task    
 
-
-
+You can find detailed explanation with more examples [here](https://examples.javacodegeeks.com/enterprise-java/jms/jms-client-example/)
 
 
 
