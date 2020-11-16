@@ -15,12 +15,16 @@ Service instance will be provisioned in few minutes. From the dashboard, navigat
 Find the RabbitMQ Admin Console:
 The URL to launch RabbitMQ Admin console is found under Overview - Connections - HTTPS.
 
- ![Connection Https ](images/RabbitMQ_AdminConsole_URL.png)
+ ![Connection HTTPS ](images/RabbitMQ_AdminConsole_URL.png)
 
 
 To Login to Admin console, you need a username and password. Set the password (minimum 10 characters) for admin user as shown in the below screen shot:
 
-![Set Admin password](images/Change_Admin_Password.png)
+![Set Admin Password](images/Change_Admin_Password.png)
+
+Click Launch button in the Overview - Connections - HTTPS. Login with username/password as admin/<new password set above>. 
+  
+![Admin Console](images/Admin_Console.png)
 
 
 
