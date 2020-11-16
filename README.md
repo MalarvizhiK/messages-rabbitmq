@@ -130,20 +130,28 @@ When a publisher sends a message, there may be more than one customer interested
 
 The createDurableSubscriber() method takes two parameters: a topic name, and a subscription name. A durable subscription’s uniqueness is defined by the client ID and the subscription name.
 
-The code **JMSSubscriberClient.java** creates a connection factory, create a new connection and session, create Topic which we will then use to pubish messages. It creates a topic called **customerTopic**. It publishes messages to the created topic. The subscribers Consumer1 and Consumer2 are subscribed to the Publisher, they receive a copy of the published message as shown below:   
+The code **JMSPublisherClient.java** creates a connection factory, create a new connection and session, create Topic which we will then use to pubish messages. It creates a topic called **customerTopic**. It publishes messages to the created topic. The code **JMSSubscriberClient.java** creates the subscribers Consumer1 and Consumer2 who are subscribed to the Publisher, they receive a copy of the published message as shown below:   
 
 > (base) Malars-MacBook-Pro-2:rabbit-test malark$ echo $CLASSPATH  
 /Users/malark/downloads/slf4j-api-1.7.30.jar:/Users/malark/downloads/geronimo-jms_1.1_spec-1.1.1.jar:/Users/malark/downloads/rabbitmq-jms-2.2.0.jar:/Users/malark/downloads/amqp-client-5.10.0.jar  
+> (base) Malars-MacBook-Pro-2:rabbit-test malark$ javac JMSPublisherClient.java    
+(base) Malars-MacBook-Pro-2:rabbit-test malark$ java JMSPublisherClient.java  
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".   
+SLF4J: Defaulting to no-operation (NOP) logger implementation   
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.   
+Created Connection Factory   
+Created Connection   
+Sending text 'Task'    
 > (base) Malars-MacBook-Pro-2:rabbit-test malark$ javac JMSSubscriberClient.java  
-> (base) Malars-MacBook-Pro-2:rabbit-test malark$ java JMSSubscriberClient.java  
-SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".  
-SLF4J: Defaulting to no-operation (NOP) logger implementation  
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.  
-Created Connection Factory  
-Created Connection  
-Sending text 'Task'  
-Consumer1 receives Task  
-Consumer2 receives Task    
+> (base) Malars-MacBook-Pro-2:rabbit-test malark$ java JMSSubscriberClient.java    
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".   
+SLF4J: Defaulting to no-operation (NOP) logger implementation   
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.   
+Created Connection Factory   
+Created Connection   
+Consumer1 receives Task   
+Consumer2 receives Task   
+
 
 You can find detailed explanation with more examples [here](https://examples.javacodegeeks.com/enterprise-java/jms/jms-client-example/)
 
