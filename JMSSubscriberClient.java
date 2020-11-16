@@ -33,13 +33,6 @@ public class JMSSubscriberClient {
                     Session.AUTO_ACKNOWLEDGE);
             Topic topic = session.createTopic("customerTopic");
  
-            // Publish
-            String payload = "Task";
-            TextMessage msg = session.createTextMessage(payload);
-            MessageProducer publisher = session.createProducer(topic);
-            System.out.println("Sending text '" + payload + "'");
-            publisher.send(msg, javax.jms.DeliveryMode.PERSISTENT, javax.jms.Message.DEFAULT_PRIORITY, Message.DEFAULT_TIME_TO_LIVE);
- 
             // Consumer1 subscribes to customerTopic
             MessageConsumer consumer1 = session.createDurableSubscriber(topic, "consumer1", "", false);     
  
@@ -48,7 +41,7 @@ public class JMSSubscriberClient {
  
             connection.start();
              
-            msg = (TextMessage) consumer1.receive();
+            TextMessage msg = (TextMessage) consumer1.receive();
             System.out.println("Consumer1 receives " + msg.getText());
             //acknowledge
             msg.acknowledge(); 
