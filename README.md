@@ -55,6 +55,8 @@ Open a terminal and set the CLASSPATH as below:
 
 > (base) Malars-MacBook-Pro-2:rabbit-test malark$ export CLASSPATH=/Users/malark/downloads/slf4j-api-1.7.30.jar:/Users/malark/downloads/geronimo-jms_1.1_spec-1.1.1.jar://Users/malark/downloads/rabbitmq-jms-2.2.0.jar:/Users/malark/downloads/amqp-client-5.10.0.jar
 
+You can learn more about RabbitMQ and the different messaging styles [here](https://www.rabbitmq.com/getstarted.html).
+
 ### JMS Client for Point to Point messaging style
 
 The code **JMSProducer.java** creates a connection factory, create a new connection and session, create message producers which we will then use to send messages. It creates a queue called **jmsqueue**. It sends the message to the created queue.  
