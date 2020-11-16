@@ -1,5 +1,7 @@
 # messages-rabbitmq
-Java Client for Messages for rabbit mq in IBM Cloud
+JMS Client samples for Messages for rabbit mq in IBM Cloud. 
+
+IBM Cloud Messages for Rabbitmq: https://cloud.ibm.com/services/messages-for-rabbitmq/ 
 
 Login to IBM Cloud. Under Catalog, search for "Messages for RabbitMQ". Create a service instance "Messages for RabbitMQ-as". 
 
@@ -43,10 +45,11 @@ In the Admin console, you can also find all created queues as shown below:
 
 ![Queues in Admin Console](images/RabbitMQ_Queues.png)
 
+You find the Java doc for Rabbit MQ [here](https://rabbitmq.github.io/rabbitmq-java-client/api/current/allclasses.html)  
 
-Java doc for Rabbit MQ: https://rabbitmq.github.io/rabbitmq-java-client/api/current/allclasses.html
+Download all prerequisite jars for Rabbit MQ [here](https://jar-download.com/artifact-search/rabbitmq-jms)   
 
-IBM Cloud Messages for Rabbitmq: https://cloud.ibm.com/services/messages-for-rabbitmq/ 
+I followed the examples from this website to code for [JMS Client](https://examples.javacodegeeks.com/enterprise-java/jms/jms-client-example/)
 
 
 
