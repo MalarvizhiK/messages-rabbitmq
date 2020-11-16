@@ -31,7 +31,7 @@ If you do not want to use admin user, then follow the steps for creating new use
 
 ![New User](images/New_User.png)
 
-Click Launch button in the Connections - HTTPS screen. In the Admin Console Launch screen, login with username/password as admin/<new password set above>. 
+Click Launch button in the Connections - HTTPS screen. In the Admin Console Launch screen, login with username/password as admin/new_password_set_above. 
   
 ![Admin Console](images/Admin_Console.png)
 
