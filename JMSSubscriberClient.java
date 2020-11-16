@@ -17,8 +17,8 @@ public class JMSSubscriberClient {
 	RMQConnectionFactory factory = new RMQConnectionFactory();
         factory.useSslProtocol();
 
-        factory.setUsername("ibm_cloud_983e2c42_4865_4755_9c83_47967c72141e");
-        factory.setPassword("36aa9ca8368b9dbbb3151782c4bbf46c0b7d6c9390cf1b11a36892ff25a1fb7e");
+        factory.setUsername("xyz");
+        factory.setPassword("xyz");
 
 	factory.setVirtualHost("/");
         factory.setHost("4f2ac774-4408-4e28-9a1d-f15cd074e04b.bkvfu0nd0m8k95k94ujg.databases.appdomain.cloud");
