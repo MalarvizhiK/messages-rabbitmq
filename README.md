@@ -57,11 +57,11 @@ Open a terminal and set the CLASSPATH as below:
 
 ### JMS Client for Point to Point messaging style
 
-The code **JMSProducer.java** creates a connection factory, create a new connection and session, create message producers which we will then use to send messages. It creates a queue called **jmsqueue**. It send the message to the created queue.  
+The code **JMSProducer.java** creates a connection factory, create a new connection and session, create message producers which we will then use to send messages. It creates a queue called **jmsqueue**. It sends the message to the created queue.  
 
 We will first obtain a connection factory, which we will then use to create a connection.
 
-In the Connection factory, set the username and password from the New Service Credentials. Set the Virtual host as "/". Enable the SSL Protocol. Set the hostname and port from Message for RabbitMQ service - Connections - AMQPS screen as shown below.
+In the Connection factory, set the username and password from the New Service Credentials. Set the Virtual host as "/". Enable the SSL Protocol. Set the hostname and port from Messages for RabbitMQ service - Connections - AMQPS screen as shown below.
 
 ![RabbitMQ AMQPS](images/RabbitMQ_AMQPS.png)
 	
@@ -87,7 +87,8 @@ Sending text 'Task7'
 Sending text 'Task8'  
 Sending text 'Task9'  
 
-The code **JMSAsyncReceiveQueueClient.java** creates a connection factory, create a new connection and session, create message consumers which we will then use to receive messages from the created queue **jmsqueue**. 
+The code **JMSAsyncReceiveQueueClient.java** creates a connection factory, create a new connection and session, create message consumers which we will then use to receive messages from the created queue **jmsqueue**. It consumes messages asynchronously. It uses a message listener in order to consume messages asynchronously.
+In order to make sure the asynchronous consumer doesn’t run indefinitely, it calls countDown() on latch when the message received is ‘END’.
 
 Compile and Run the Program as shown below:
 
