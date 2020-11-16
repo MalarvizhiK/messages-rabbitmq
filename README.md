@@ -63,7 +63,7 @@ The code **JMSProducer.java** creates a connection factory, create a new connect
 
 We will first obtain a connection factory, which we will then use to create a connection.
 
-In the Connection factory, set the username and password from the New Service Credentials. Set the Virtual host as "/". Enable the SSL Protocol. Set the hostname and port from Messages for RabbitMQ service - Connections - AMQPS screen as shown below.
+In the Connection factory, set the username and password from the Messages for RabbitMQ service - Connections - Service Credentials screen (I am using a different user than admin. You can also use admin user here). Set the Virtual host as "/". Enable the SSL Protocol. Set the hostname and port from Messages for RabbitMQ service - Connections - AMQPS screen as shown below.
 
 ![RabbitMQ AMQPS](images/RabbitMQ_AMQPS.png)
 	
