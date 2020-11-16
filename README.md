@@ -26,6 +26,11 @@ Click Launch button in the Overview - Connections - HTTPS. Login with username/p
   
 ![Admin Console](images/Admin_Console.png)
 
+Create new user in Rabbit MQ as shown below: 
+
+Follow the steps for creating new user [here](https://cloud.ibm.com/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-connection-strings)  
+
+![New User](images/New_User.png)
 
 
 Java doc for Rabbit MQ: https://rabbitmq.github.io/rabbitmq-java-client/api/current/allclasses.html
