@@ -57,7 +57,7 @@ Open a terminal and set the CLASSPATH as below:
 
 My java version is java 11.
 
-> (base) Malars-MacBook-Pro-2:rabbit-test malark$ java -version
+> (base) Malars-MacBook-Pro-2:rabbit-test malark$ java -version  
 java version "11.0.9" 2020-10-20 LTS  
 Java(TM) SE Runtime Environment 18.9 (build 11.0.9+7-LTS)  
 Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.9+7-LTS, mixed mode)  
