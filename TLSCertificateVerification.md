@@ -4,7 +4,7 @@ Following are the steps to verify the TLS certificate of IBM Cloud Rabbit MQ:
 
 1. Follow the steps mentioned [here](https://cloud.ibm.com/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin) under the topic **Using the self-signed certificate**. This is for downloading the TLS Certificate of the user.   
 
-a) You can find the TLS Certificate of a user, under Messages for RabbitMQ-as - Overview - Connections - AMQPS. Copy the TLS Certificate from Content textbox.  
+a) You can find the TLS Certificate of admin user, under Messages for RabbitMQ-as - Overview - Connections - AMQPS. Copy the TLS Certificate from Content textbox.  
 
 ![TLS Certificate](images/RabbitMQ_AMQPS.png). 
 
