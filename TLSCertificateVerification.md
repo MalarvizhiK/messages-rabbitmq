@@ -8,7 +8,7 @@ a) You can find the TLS Certificate of admin user, under Messages for RabbitMQ-a
 
 ![TLS Certificate](images/RabbitMQ_AMQPS.png). 
 
-b) Copy the value of Content textbox. Here is a sample TLS Certificate.
+b) Copy the value of Contents textbox. Here is a sample TLS Certificate.
 
 
 ```
@@ -19,7 +19,7 @@ UA==
 -----END CERTIFICATE-----
 ```
    
-c) Create a new file **client_cert.pem** and copy the above Content string into the file. 
+c) Create a new file **client_cert.pem** and copy the above Contents string into the file. 
 
 2. Download the code from internal github repo: https://github.ibm.com/ibm-cloud-databases/rabbitmq-client-examples 
 
