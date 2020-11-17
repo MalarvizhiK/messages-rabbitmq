@@ -107,5 +107,6 @@ c) run the compiled Java test application using those properties:
 
 > Hostname verification enabled 
 
-> Received message: Hello World!  
+> Received message: Hello World!   
 
+You should see the above messages. 
