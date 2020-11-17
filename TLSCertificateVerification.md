@@ -27,7 +27,7 @@ c) Create a new file **client_cert.pem** and copy the above Contents string into
 git clone git@github.ibm.com:ibm-cloud-databases/rabbitmq-client-examples.git
 ```
  
-3. Follow the steps mentioned [here](https://github.ibm.com/ibm-cloud-databases/rabbitmq-client-examples/tree/master/java/rabbitmq-client/TestConnectionCertificateOnly) for verifying the TLS Certificate programmatically using java.     
+3. Follow the steps mentioned [here](https://github.ibm.com/ibm-cloud-databases/rabbitmq-client-examples/tree/master/java/rabbitmq-client/TestConnectionCertificateOnly) for verifying the TLS Certificate programmatically using java. Change the directory to /Users/malark/content/rabbitmq-client-examples/java/rabbitmq-client/TestConnectionCertificateOnly.  
 
 > (base) Malars-MacBook-Pro-2:content malark$ cd rabbitmq-client-examples/java/rabbitmq-client/TestConnectionCertificateOnly  
 
