@@ -56,14 +56,18 @@ https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.28/slf4j-api-1.7.28.jar.
 https://repo1.maven.org/maven2/org/slf4j/slf4j-simple/1.7.28/slf4j-simple-1.7.28.jar.   
 
 > (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ ls   
+
 README.md				amqp-client-5.7.3.jar			download_dependencies.sh		slf4j-simple-1.7.28.jar 
 TestConnectionCertificateOnly.java	compile.sh				slf4j-api-1.7.28.jar 
  
 (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ javac -cp .:amqp-client-5.7.3.jar:slf4j-api-1.7.28.jar:slf4j-simple-1.7.28.jar *.java   
 
 (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ ls   
+
 README.md				TestConnectionCertificateOnly.java	compile.sh				slf4j-api-1.7.28.jar 
+
 TestConnectionCertificateOnly.class	amqp-client-5.7.3.jar			download_dependencies.sh		slf4j-simple-1.7.28.jar 
+
 
 5. Copy the file created in step 1 **client_cert.pem** here in current directory. 
 
@@ -94,6 +98,8 @@ c) run the compiled Java test application using those properties:
 (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ java -cp .:amqp-client-5.7.3.jar:slf4j-api-1.7.28.jar:slf4j-simple-1.7.28.jar   TestConnectionCertificateOnly $HOSTNAME $PORT $USERNAME $PASSWORD true true $PWD. 
 
 Certificate verification via custom trust store enabled. 
+
 Hostname verification enabled. 
+
 Received message: Hello World!  
 
