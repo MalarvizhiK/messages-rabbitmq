@@ -64,16 +64,19 @@ Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.9+7-LTS, mixed mode)
 
 You can learn more about RabbitMQ and the different messaging styles [here](https://www.rabbitmq.com/getstarted.html).
 
-### JMS Client for Point to Point messaging style
+### Declare the connection prperties in connection.properties 
 
-The code **JMSProducer.java** creates a connection factory, create a new connection and session, create message producers which we will then use to send messages. It creates a queue called **jmsqueue**. It sends the message to the created queue.  
+We will first obtain a connection factory, which we will then use to create a connection. 
 
-We will first obtain a connection factory, which we will then use to create a connection.
-
-In the Connection factory, set the username and password from the Messages for RabbitMQ service - Connections - Service Credentials screen (I am using a different user than admin. You can also use admin user here). Set the Virtual host as "/". Enable the SSL Protocol. Set the hostname and port from Messages for RabbitMQ service - Connections - AMQPS screen as shown below.
+In the connection.properties, set the username and password from the Messages for RabbitMQ service - Connections - Service Credentials screen (I am using a different user than admin. You can also use admin user here). Set the Virtual host as "/". Set the hostname and port from Messages for RabbitMQ service - Connections - AMQPS screen as shown below.
 
 ![RabbitMQ AMQPS](images/RabbitMQ_AMQPS.png)
-	
+
+In Connection Factory, we use the connection properties by reading the properties file. Also, enable the SSL Protocol.   
+
+### JMS Client for Point to Point messaging style
+
+The code **JMSProducer.java** creates a connection factory, create a new connection and session, create message producers which we will then use to send messages. It creates a queue called **jmsqueue**. It sends the message to the created queue.  	
 
 Compile and Run the Program as shown below:
 
