@@ -39,7 +39,7 @@ c) Create a new file **client_cert.pem** and copy the above decoded string into 
 git clone git@github.ibm.com:ibm-cloud-databases/rabbitmq-client-examples.git
 ```
  
-3. Follow the steps mentioned [here](https://github.ibm.com/ibm-cloud-databases/rabbitmq-client-examples/tree/master/java/rabbitmq-client/TestConnectionCertificateOnly) for verifying the TLS Cerificate programmatically using java.     
+3. Follow the steps mentioned [here](https://github.ibm.com/ibm-cloud-databases/rabbitmq-client-examples/tree/master/java/rabbitmq-client/TestConnectionCertificateOnly) for verifying the TLS Certificate programmatically using java.     
 
 > (base) Malars-MacBook-Pro-2:content malark$ cd rabbitmq-client-examples/java/rabbitmq-client/TestConnectionCertificateOnly  
 
