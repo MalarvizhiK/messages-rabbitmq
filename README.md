@@ -155,6 +155,7 @@ Created Connection
 Consumer1 receives Task   
 Consumer2 receives Task   
 
+> **NOTE:** Run the program **JMSPublisherClient.java**  and then run the program  **JMSSubscriberClient.java**. Otherwise,  **JMSSubscriberClient.java** will indefinitely wait for messages from topic.
 
 You can find detailed explanation with more examples [here](https://examples.javacodegeeks.com/enterprise-java/jms/jms-client-example/)
 
