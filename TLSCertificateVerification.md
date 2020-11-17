@@ -4,24 +4,12 @@ Following are the steps to verify the TLS certificate of IBM Cloud Rabbit MQ:
 
 1. Follow the steps mentioned [here](https://cloud.ibm.com/docs/messages-for-rabbitmq?topic=messages-for-rabbitmq-management-plugin) under the topic **Using the self-signed certificate**. This is for downloading the TLS Certificate of the user.   
 
-a) You can find the TLS Certificate of a user, under Messages for RabbitMQ-as - Service Credentials - New User Credential. Expand the Credential. You will find a json that contains the username, password, certificate_base64 as shown below:  
+a) You can find the TLS Certificate of a user, under Messages for RabbitMQ-as - Overview - Connections - AMQPS. Copy the TLS Certificate from Content textbox.  
 
-```
-"connection": {
-    "amqps": {
-      "authentication": {
-        "method": "direct",
-        "password": "xxxxx",
-        "username": "xxxx"
-      },
-      "certificate": {
-        "certificate_base64": "xxxxxx",
-        "name": "xxxxx"
-```
+![TLS Certificate](images/RabbitMQ_AMQPS.png). 
 
-b) Copy the value of certificate_base64 field and decode the string using an online tool: https://www.base64decode.org/ 
+b) Copy the value of Content textbox. Here is a sample TLS Certificate.
 
-You will get a decoded string as shown below:  
 
 ```
 -----BEGIN CERTIFICATE-----
@@ -31,7 +19,7 @@ UA==
 -----END CERTIFICATE-----
 ```
    
-c) Create a new file **client_cert.pem** and copy the above decoded string into the file. 
+c) Create a new file **client_cert.pem** and copy the above Content string into the file. 
 
 2. Download the code from internal github repo: https://github.ibm.com/ibm-cloud-databases/rabbitmq-client-examples 
 
@@ -91,11 +79,21 @@ b) import the certificate from file 'client_cert.pem' into the Java trust store:
 keytool -import -alias targetrmq -file client_cert.pem -keystore rabbitstore -storepass changeit -noprompt
 ```
 
-c) run the compiled Java test application using those properties:   
+c) Delete an existing alias from keystore. This is needed when you get an error that alias already exists in keystore. 
 
-> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ export USERNAME="xxx" 
+``` 
+keytool -delete  -alias targetrmq -keystore rabbitstore 
+Enter keystore password: changeit   
+(base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ keytool -import -alias targetrmq -file client_cert.pem -keystore rabbitstore -storepass changeit -noprompt 
+Certificate was added to keystore 
 
-> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ export PASSWORD="xxx"   
+``` 
+
+d) run the compiled Java test application using those properties:   
+
+> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ export USERNAME="admin" 
+
+> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ export PASSWORD="xxxxxxxxxxxxxxxx"   
 
 > (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ export HOSTNAME="4f2ac774-4408-4e28-9a1d-f15cd074e04b.bkvfu0nd0m8k95k94ujg.databases.appdomain.cloud" 
 
