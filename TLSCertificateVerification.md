@@ -55,22 +55,24 @@ git clone git@github.ibm.com:ibm-cloud-databases/rabbitmq-client-examples.git
 
 4. Download the jars mentioned in file download_dependencies.sh to your local mac system. Copy the downloaded jars to current directory: /Users/malark/content/rabbitmq-client-examples/java/rabbitmq-client/TestConnectionCertificateOnly.       
 
-https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.7.3/amqp-client-5.7.3.jar.   
-https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.28/slf4j-api-1.7.28.jar.   
-https://repo1.maven.org/maven2/org/slf4j/slf4j-simple/1.7.28/slf4j-simple-1.7.28.jar.   
+https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.7.3/amqp-client-5.7.3.jar
+
+https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.28/slf4j-api-1.7.28.jar   
+
+https://repo1.maven.org/maven2/org/slf4j/slf4j-simple/1.7.28/slf4j-simple-1.7.28.jar   
 
 > (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ ls   
 
-README.md				amqp-client-5.7.3.jar			download_dependencies.sh		slf4j-simple-1.7.28.jar 
-TestConnectionCertificateOnly.java	compile.sh				slf4j-api-1.7.28.jar 
+> README.md				amqp-client-5.7.3.jar			download_dependencies.sh		slf4j-simple-1.7.28.jar 
+> TestConnectionCertificateOnly.java	compile.sh				slf4j-api-1.7.28.jar 
  
-(base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ javac -cp .:amqp-client-5.7.3.jar:slf4j-api-1.7.28.jar:slf4j-simple-1.7.28.jar *.java   
+> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ javac -cp .:amqp-client-5.7.3.jar:slf4j-api-1.7.28.jar:slf4j-simple-1.7.28.jar *.java   
 
-(base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ ls   
+> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ ls   
 
-README.md				TestConnectionCertificateOnly.java	compile.sh				slf4j-api-1.7.28.jar 
+> README.md				TestConnectionCertificateOnly.java	compile.sh				slf4j-api-1.7.28.jar 
 
-TestConnectionCertificateOnly.class	amqp-client-5.7.3.jar			download_dependencies.sh		slf4j-simple-1.7.28.jar 
+> TestConnectionCertificateOnly.class	amqp-client-5.7.3.jar			download_dependencies.sh		slf4j-simple-1.7.28.jar 
 
 
 5. Copy the file created in step 1 **client_cert.pem** here in current directory. 
@@ -95,15 +97,15 @@ c) run the compiled Java test application using those properties:
 
 > (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ export PASSWORD="xxx"   
 
-> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ export HOSTNAME="4f2ac774-4408-4e28-9a1d-f15cd074e04b.bkvfu0nd0m8k95k94ujg.databases.appdomain.cloud". 
+> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ export HOSTNAME="4f2ac774-4408-4e28-9a1d-f15cd074e04b.bkvfu0nd0m8k95k94ujg.databases.appdomain.cloud" 
 
 > (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ export PORT=30696
 
-> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ java -cp .:amqp-client-5.7.3.jar:slf4j-api-1.7.28.jar:slf4j-simple-1.7.28.jar   TestConnectionCertificateOnly $HOSTNAME $PORT $USERNAME $PASSWORD true true $PWD. 
+> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ java -cp .:amqp-client-5.7.3.jar:slf4j-api-1.7.28.jar:slf4j-simple-1.7.28.jar   TestConnectionCertificateOnly $HOSTNAME $PORT $USERNAME $PASSWORD true true $PWD 
 
-> Certificate verification via custom trust store enabled. 
+> Certificate verification via custom trust store enabled 
 
-> Hostname verification enabled. 
+> Hostname verification enabled 
 
 > Received message: Hello World!  
 
