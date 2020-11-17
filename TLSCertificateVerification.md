@@ -79,7 +79,7 @@ b) import the certificate from file 'client_cert.pem' into the Java trust store:
 keytool -import -alias targetrmq -file client_cert.pem -keystore rabbitstore -storepass changeit -noprompt
 ```
 
-c) Delete an existing alias from keystore. This is needed when you get an error that alias already exists in keystore. 
+c) Delete an existing alias from keystore. This is needed when you get an error that alias already exists in keystore. Delete alias and import again.  
 
 ``` 
 keytool -delete  -alias targetrmq -keystore rabbitstore 
