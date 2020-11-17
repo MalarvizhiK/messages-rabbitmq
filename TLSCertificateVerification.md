@@ -41,13 +41,17 @@ git clone git@github.ibm.com:ibm-cloud-databases/rabbitmq-client-examples.git
  
 3. Follow the steps mentioned [here](https://github.ibm.com/ibm-cloud-databases/rabbitmq-client-examples/tree/master/java/rabbitmq-client/TestConnectionCertificateOnly) for verifying the TLS Cerificate programmatically using java.     
 
-> (base) Malars-MacBook-Pro-2:content malark$ cd rabbitmq-client-examples/java/rabbitmq-client/TestConnectionCertificateOnly.  
+> (base) Malars-MacBook-Pro-2:content malark$ cd rabbitmq-client-examples/java/rabbitmq-client/TestConnectionCertificateOnly  
 
-> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ ls.  
-README.md				TestConnectionCertificateOnly.java	compile.sh				download_dependencies.sh. 
-(base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ pwd. 
-/Users/malark/content/rabbitmq-client-examples/java/rabbitmq-client/TestConnectionCertificateOnly. 
-(base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$   
+> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ ls  
+
+> README.md				TestConnectionCertificateOnly.java	compile.sh				download_dependencies.sh 
+
+> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ pwd 
+
+> /Users/malark/content/rabbitmq-client-examples/java/rabbitmq-client/TestConnectionCertificateOnly 
+
+> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$   
 
 4. Download the jars mentioned in file download_dependencies.sh to your local mac system. Copy the downloaded jars to current directory: /Users/malark/content/rabbitmq-client-examples/java/rabbitmq-client/TestConnectionCertificateOnly.       
 
@@ -87,19 +91,19 @@ keytool -import -alias targetrmq -file client_cert.pem -keystore rabbitstore -st
 
 c) run the compiled Java test application using those properties:   
 
-(base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ export USERNAME="xxx" 
+> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ export USERNAME="xxx" 
 
-(base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ export PASSWORD="xxx"   
+> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ export PASSWORD="xxx"   
 
-(base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ export HOSTNAME="4f2ac774-4408-4e28-9a1d-f15cd074e04b.bkvfu0nd0m8k95k94ujg.databases.appdomain.cloud". 
+> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ export HOSTNAME="4f2ac774-4408-4e28-9a1d-f15cd074e04b.bkvfu0nd0m8k95k94ujg.databases.appdomain.cloud". 
 
-(base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ export PORT=30696
+> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ export PORT=30696
 
-(base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ java -cp .:amqp-client-5.7.3.jar:slf4j-api-1.7.28.jar:slf4j-simple-1.7.28.jar   TestConnectionCertificateOnly $HOSTNAME $PORT $USERNAME $PASSWORD true true $PWD. 
+> (base) Malars-MacBook-Pro-2:TestConnectionCertificateOnly malark$ java -cp .:amqp-client-5.7.3.jar:slf4j-api-1.7.28.jar:slf4j-simple-1.7.28.jar   TestConnectionCertificateOnly $HOSTNAME $PORT $USERNAME $PASSWORD true true $PWD. 
 
-Certificate verification via custom trust store enabled. 
+> Certificate verification via custom trust store enabled. 
 
-Hostname verification enabled. 
+> Hostname verification enabled. 
 
-Received message: Hello World!  
+> Received message: Hello World!  
 
