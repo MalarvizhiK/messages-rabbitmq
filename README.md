@@ -64,11 +64,11 @@ Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.9+7-LTS, mixed mode)
 
 You can learn more about RabbitMQ and the different messaging styles [here](https://www.rabbitmq.com/getstarted.html).
 
-### Declare the connection prperties in connection.properties 
+### Declare the connection properties in connection.properties 
 
 We will first obtain a connection factory, which we will then use to create a connection. 
 
-In the connection.properties, set the username and password from the Messages for RabbitMQ service - Connections - Service Credentials screen (I am using a different user than admin. You can also use admin user here). Set the Virtual host as "/". Set the hostname and port from Messages for RabbitMQ service - Connections - AMQPS screen as shown below.
+Modify the connection.properties file, and set the username and password from the Messages for RabbitMQ service - Connections - Service Credentials screen (I am using a different user than admin. You can also use admin user here). Set the Virtual host as "/". Set the hostname and port from Messages for RabbitMQ service - Connections - AMQPS screen as shown below.
 
 ![RabbitMQ AMQPS](images/RabbitMQ_AMQPS.png)
 
