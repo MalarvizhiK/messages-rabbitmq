@@ -6,6 +6,8 @@ import javax.jms.MessageProducer;
 import javax.jms.Session;
 import javax.jms.TextMessage;
 import javax.jms.Topic;
+import java.util.Properties;
+import java.io.FileReader;
 
 import com.rabbitmq.jms.admin.RMQConnectionFactory;
 
@@ -13,16 +15,23 @@ public class JMSSubscriberClient {
     public static void main(String[] args) throws Exception {
         Connection connection = null;
         try {
-            // Producer
-	RMQConnectionFactory factory = new RMQConnectionFactory();
+
+	// read the properties from connection.properties
+        FileReader reader=new FileReader("connection.properties");
+
+        Properties p=new Properties();
+        p.load(reader);
+
+        // Producer
+        RMQConnectionFactory factory = new RMQConnectionFactory();
         factory.useSslProtocol();
 
-        factory.setUsername("xyz");
-        factory.setPassword("xyz");
+        factory.setUsername(p.getProperty("username"));
+        factory.setPassword(p.getProperty("password"));
 
-	factory.setVirtualHost("/");
-        factory.setHost("4f2ac774-4408-4e28-9a1d-f15cd074e04b.bkvfu0nd0m8k95k94ujg.databases.appdomain.cloud");
-        factory.setPort(30696);
+        factory.setVirtualHost(p.getProperty("virtualhost"));
+        factory.setHost(p.getProperty("hostname"));
+        factory.setPort(Integer.parseInt(p.getProperty("port")));
 
         System.out.println("Created Connection Factory");
 
