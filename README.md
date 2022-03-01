@@ -39,7 +39,11 @@ Now, let us find all RabbitMQ configuration. In the screen shot below, you can s
 
 ![SSL enabled in Admin Console](images/AdminConsole_SSL.png)
 
-So, we need to enable SSL protocol in connection factory. 
+So, we need to enable SSL protocol in connection factory. The code uses Ssl. 
+
+```
+factory.useSslProtocol();
+```
 
 In the Admin console, you can also find all created queues as shown below: 
 
