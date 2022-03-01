@@ -72,7 +72,17 @@ Modify the connection.properties file, and set the username and password from th
 
 ![RabbitMQ AMQPS](images/RabbitMQ_AMQPS.png)
 
-In Connection Factory, we use the connection properties by reading the properties file. Also, enable the SSL Protocol.   
+In Connection Factory, we use the connection properties by reading the properties file. Also, enable the SSL Protocol.    
+
+Below is a sample connection.properties (value should be without quotes)   
+
+```
+username=admin
+password=adminis...
+hostname=.....databases.appdomain.cloud
+port=32683
+virtualhost=/
+```
 
 ### JMS Client for Point to Point messaging style
 
